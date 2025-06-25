@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - JTG Quarry</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #f59e0b;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .logo-placeholder {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f3f4f6;
+            border: 2px dashed #d1d5db;
+            border-radius: 4px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        .mobile-menu {
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600'%3E%3Crect width='1200' height='600' fill='%23333333'/%3E%3Cpath d='M0,400 L200,350 L400,450 L600,380 L800,420 L1000,350 L1200,400 L1200,600 L0,600 Z' fill='%23555555'/%3E%3Cpath d='M0,450 L200,500 L400,480 L600,520 L800,490 L1000,510 L1200,480 L1200,600 L0,600 Z' fill='%23777777'/%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-section h1 {
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero-section p {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .hero-section .button-group a {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section .bg-white {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="logo-placeholder w-40 px-3">
+                        <span>JTG Quarry</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="site.html" class="nav-link text-gray-700 hover:text-amber-500 font-medium">Home</a>
+                    <a href="site.html#about" class="nav-link text-gray-700 hover:text-amber-500 font-medium">About</a>
+                    <a href="site.html#products" class="nav-link text-gray-700 hover:text-amber-500 font-medium">Products</a>
+                    <a href="site.html#services" class="nav-link text-gray-700 hover:text-amber-500 font-medium">Services</a>
+                    <a href="site.html#testimonials" class="nav-link text-gray-700 hover:text-amber-500 font-medium">Testimonials</a>
+                    <a href="site.html#contact" class="nav-link text-gray-700 hover:text-amber-500 font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-amber-500 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 md:hidden">
+            <div class="p-4 border-b">
+                <div class="flex justify-between items-center">
+                    <div class="logo-placeholder w-32 px-2">
+                        <span>JTG Quarry</span>
+                    </div>
+                    <button id="close-menu" class="text-gray-700 hover:text-amber-500 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="p-4">
+                <ul>
+                    <li class="mb-4"><a href="site.html" class="block text-gray-700 hover:text-amber-500 font-medium">Home</a></li>
+                    <li class="mb-4"><a href="site.html#about" class="block text-gray-700 hover:text-amber-500 font-medium">About</a></li>
+                    <li class="mb-4"><a href="site.html#products" class="block text-gray-700 hover:text-amber-500 font-medium">Products</a></li>
+                    <li class="mb-4"><a href="site.html#services" class="block text-gray-700 hover:text-amber-500 font-medium">Services</a></li>
+                    <li class="mb-4"><a href="site.html#testimonials" class="block text-gray-700 hover:text-amber-500 font-medium">Testimonials</a></li>
+                    <li class="mb-4"><a href="site.html#contact" class="block text-gray-700 hover:text-amber-500 font-medium">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Explore Our Premium Products</h1>
+                <p class="text-lg md:text-xl mb-8">Discover our wide range of high-quality construction materials, perfect for any project</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#products-grid" class="bg-amber-500 hover:bg-amber-600 text-white font-medium py-3 px-6 rounded-md transition duration-300 ease-in-out">View Products</a>
+                    <a href="site.html#contact" class="bg-transparent hover:bg-white hover:text-gray-800 text-white font-medium py-3 px-6 border-2 border-white rounded-md transition duration-300 ease-in-out">Request Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section id="products-grid" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="relative h-64 bg-gray-300">
+                        <img src="img/products/Aggregate.avif" alt="Aggregate" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Aggregate</h3>
+                        <p class="text-gray-600 mb-4">High-quality crushed stone aggregate for construction and landscaping projects.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-amber-500 font-semibold">KES 1,200/ton</span>
+                            <div class="flex space-x-2">
+                                <button class="text-gray-600 hover:text-amber-500">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-amber-500">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="relative h-64 bg-gray-300">
+                        <img src="img/products/Road Channels.avif" alt="Road Channels" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Road Channels</h3>
+                        <p class="text-gray-600 mb-4">Durable concrete road channels for efficient water drainage and safety.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-amber-500 font-semibold">KES 2,500/meter</span>
+                            <div class="flex space-x-2">
+                                <button class="text-gray-600 hover:text-amber-500">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-amber-500">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="relative h-64 bg-gray-300">
+                        <img src="img/products/Stone.avif" alt="Stone" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Dimension Stone</h3>
+                        <p class="text-gray-600 mb-4">Premium quality dimension stone blocks for construction and architectural projects.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-amber-500 font-semibold">KES 3,000/m³</span>
+                            <div class="flex space-x-2">
+                                <button class="text-gray-600 hover:text-amber-500">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-amber-500">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Product Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="category-card bg-white rounded-lg p-6 hover:shadow-lg transition duration-300">
+                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-cubes text-amber-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Aggregates</h3>
+                    <p class="text-gray-600">Crushed stone, gravel, and sand for construction</p>
+                </div>
+                <div class="category-card bg-white rounded-lg p-6 hover:shadow-lg transition duration-300">
+                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-road text-amber-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Road Infrastructure</h3>
+                    <p class="text-gray-600">Road channels, kerbstones, and drainage solutions</p>
+                </div>
+                <div class="category-card bg-white rounded-lg p-6 hover:shadow-lg transition duration-300">
+                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-amber-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Dimension Stone</h3>
+                    <p class="text-gray-600">Cut stone blocks for construction and architecture</p>
+                </div>
+                <div class="category-card bg-white rounded-lg p-6 hover:shadow-lg transition duration-300">
+                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-amber-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Specialty Products</h3>
+                    <p class="text-gray-600">Custom stone solutions for special projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="mb-4">
+                        <img src="img/logo/logo.png" alt="JTG Quarry Logo" class="h-12">
+                    </div>
+                    <p class="text-gray-400 mb-4">JTG Quarry is a leading provider of high-quality construction materials with years of experience in the industry.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-amber-500 transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-amber-500 transition duration-300">About Us</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-amber-500 transition duration-300">Products</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-amber-500 transition duration-300">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-amber-500 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Thika Quarry, Off Thika-Garissa Road, Thika, Kenya</li>
+                        <li><i class="fas fa-phone mr-2"></i>+254 745 542 542</li>
+                        <li><i class="fas fa-phone mr-2"></i>+254 115 222 444</li>
+                        <li><i class="fas fa-envelope mr-2"></i>quarry@jtg.co.ke</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@jtg.co.ke</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news and offers.</p>
+                    <form class="flex space-x-2">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <button type="submit" class="bg-amber-500 text-white px-6 py-2 rounded-lg hover:bg-amber-600 transition duration-300">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 JTG Quarry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
