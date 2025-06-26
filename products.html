@@ -7,6 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="assets/style.css" rel="stylesheet">
+    <style>
+        .category-card {
+            transition: all 0.3s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-8px);
+        }
+        .icon-gradient {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -123,7 +134,7 @@
             <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
                 <div class="aspect-square bg-gray-200 overflow-hidden">
                     <img 
-                        src="assets/img/products/Half Aggregate.avif" 
+                        src="assets/img/products/half aggregate.avif" 
                         alt="1/2 Aggregate" 
                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -187,24 +198,24 @@
             <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
                 <div class="aspect-square bg-gray-200 overflow-hidden">
                     <img 
-                        src="assets/img/products/Hardcore.avif" 
-                        alt="Hardcore" 
+                        src="assets/img/products/Sand.avif" 
+                        alt="Sand" 
                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                 </div>
                 
                 <div class="p-4 flex flex-col flex-grow">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Hardcore</h3>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sand</h3>
                     <p class="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
-                        Robust broken stone material used as sub-base for roads, driveways, and building foundations. Provides excellent load-bearing capacity and drainage for construction projects.
+                        Premium washed and graded sand for concrete mixing, masonry work, and plastering. Clean composition ensures strong bonding and smooth application in all construction needs.
                     </p>
                     <div class="mt-auto">
                         <div class="mb-3">
-                            <span class="text-xl font-bold text-amber-600">KSh 1,160</span>
+                            <span class="text-xl font-bold text-amber-600">KSh 1,856</span>
                             <span class="text-gray-500 text-xs"></span>
                         </div>
                         <div class="flex flex-col gap-2">
-                            <span class="text-amber-600 font-medium text-xs">Certified quality</span>
+                            <span class="text-amber-600 font-medium text-xs">Clean & graded</span>
                             <a href="products.html">
                                 <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 px-3 rounded-md transition-all duration-300 text-sm font-medium">
                                     View Details
@@ -214,6 +225,7 @@
                     </div>
                 </div>
             </div>
+
 
             <!-- Product 5 -->
             <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
@@ -280,27 +292,29 @@
             </div>
 
             <!-- Product 7 -->
+
+
             <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
                 <div class="aspect-square bg-gray-200 overflow-hidden">
                     <img 
-                        src="assets/img/products/Sand.avif" 
-                        alt="Sand" 
+                        src="assets/img/products/Hardcore.avif" 
+                        alt="Hardcore" 
                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                 </div>
                 
                 <div class="p-4 flex flex-col flex-grow">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sand</h3>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Hardcore</h3>
                     <p class="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
-                        Premium washed and graded sand for concrete mixing, masonry work, and plastering. Clean composition ensures strong bonding and smooth application in all construction needs.
+                        Robust broken stone material used as sub-base for roads, driveways, and building foundations. Provides excellent load-bearing capacity and drainage for construction projects.
                     </p>
                     <div class="mt-auto">
                         <div class="mb-3">
-                            <span class="text-xl font-bold text-amber-600">KSh 1,856</span>
+                            <span class="text-xl font-bold text-amber-600">KSh 1,160</span>
                             <span class="text-gray-500 text-xs"></span>
                         </div>
                         <div class="flex flex-col gap-2">
-                            <span class="text-amber-600 font-medium text-xs">Clean & graded</span>
+                            <span class="text-amber-600 font-medium text-xs">Certified quality</span>
                             <a href="products.html">
                                 <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 px-3 rounded-md transition-all duration-300 text-sm font-medium">
                                     View Details
@@ -352,42 +366,95 @@
     </div>
 </section>
 
-    <!-- Product Categories -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Product Categories</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="category-card bg-white rounded-lg p-6 hover:shadow-lg transition duration-300">
-                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                        <i class="fas fa-cubes text-amber-500 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Aggregates</h3>
-                    <p class="text-gray-600">Crushed stone, gravel, and sand for construction</p>
+ <!-- Product Categories -->
+ <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Product Categories</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Explore our comprehensive range of construction materials, each category designed to meet specific industry standards and project requirements.</p>
+            <div class="w-24 h-1 bg-amber-500 mx-auto mt-6"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Aggregates Category -->
+            <div class="category-card bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl border border-gray-100">
+                <div class="icon-gradient rounded-2xl w-20 h-20 flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-cubes text-white text-3xl"></i>
                 </div>
-                <div class="category-card bg-white rounded-lg p-6 hover:shadow-lg transition duration-300">
-                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                        <i class="fas fa-road text-amber-500 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Road Infrastructure</h3>
-                    <p class="text-gray-600">Road channels, kerbstones, and drainage solutions</p>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Aggregates</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">Premium crushed stone materials including 1/4", 1/2", and 3/4" aggregates, hardcore, stone dust, and construction sand for concrete production and general construction.</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">Concrete Mix</span>
+                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">Road Base</span>
+                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">Drainage</span>
                 </div>
-                <div class="category-card bg-white rounded-lg p-6 hover:shadow-lg transition duration-300">
-                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                        <i class="fas fa-building text-amber-500 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Dimension Stone</h3>
-                    <p class="text-gray-600">Cut stone blocks for construction and architecture</p>
+                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    Explore Aggregates
+                </button>
+            </div>
+
+            <!-- Precast & Blocks Category -->
+            <div class="category-card bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl border border-gray-100">
+                <div class="icon-gradient rounded-2xl w-20 h-20 flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-th-large text-white text-3xl"></i>
                 </div>
-                <div class="category-card bg-white rounded-lg p-6 hover:shadow-lg transition duration-300">
-                    <div class="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                        <i class="fas fa-tools text-amber-500 text-2xl"></i>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Precast & Blocks</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">Ready-made concrete blocks, precast elements, and modular construction units designed for quick installation and superior structural integrity in residential and commercial projects.</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">Wall Systems</span>
+                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">Boundaries</span>
+                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">Custom Sizes</span>
+                </div>
+                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    View Precast Solutions
+                </button>
+            </div>
+
+            <!-- Dimension Stone Category -->
+            <div class="category-card bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl border border-gray-100">
+                <div class="icon-gradient rounded-2xl w-20 h-20 flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-gem text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Dimension Stone</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">Precisely cut natural stone blocks and architectural elements for premium construction, landscaping, and decorative applications with consistent quality and finish.</p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">Architecture</span>
+                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">Landscaping</span>
+                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium">Premium Finish</span>
+                </div>
+                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    Discover Stone Solutions
+                </button>
+            </div>
+        </div>
+
+        <!-- Additional Info Section -->
+        <div class="mt-16 text-center">
+            <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto border border-gray-100">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Need Custom Solutions?</h3>
+                <p class="text-gray-600 mb-6">We specialize in providing tailored stone and concrete solutions for unique project requirements. Our technical team works closely with contractors, architects, and developers to deliver materials that meet exact specifications.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <i class="fas fa-check-circle text-amber-500"></i>
+                        <span>Quality Certified Materials</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Specialty Products</h3>
-                    <p class="text-gray-600">Custom stone solutions for special projects</p>
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <i class="fas fa-truck text-amber-500"></i>
+                        <span>Reliable Delivery Service</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <i class="fas fa-tools text-amber-500"></i>
+                        <span>Technical Support</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <i class="fas fa-shield-alt text-amber-500"></i>
+                        <span>Industry Standards</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
