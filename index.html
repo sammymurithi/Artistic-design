@@ -6,70 +6,7 @@
     <title>JTG Quarry - Quality Construction Materials</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600'%3E%3Crect width='1200' height='600' fill='%23333333'/%3E%3Cpath d='M0,400 L200,350 L400,450 L600,380 L800,420 L1000,350 L1200,400 L1200,600 L0,600 Z' fill='%23555555'/%3E%3Cpath d='M0,450 L200,500 L400,480 L600,520 L800,490 L1000,510 L1200,480 L1200,600 L0,600 Z' fill='%23777777'/%3E%3C/svg%3E");
-            background-size: cover;
-            background-position: center;
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #f59e0b;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .product-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .service-icon {
-            transition: transform 0.3s ease;
-        }
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
-        }
-        .testimonial-card {
-            transition: transform 0.3s ease;
-        }
-        .testimonial-card:hover {
-            transform: scale(1.02);
-        }
-        .mobile-menu {
-            transition: transform 0.3s ease;
-            transform: translateX(-100%);
-        }
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-        .logo-placeholder {
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f3f4f6;
-            border: 2px dashed #d1d5db;
-            border-radius: 4px;
-            color: #6b7280;
-            font-weight: 500;
-        }
-    </style>
+    <link href="assets/style.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -78,7 +15,7 @@
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
                     <!-- Logo Placeholder - Replace with your actual logo -->
-                    <div class="logo-placeholder w-40 px-3" src="img/logo/jtg-logo.png">
+                    <div class="logo-placeholder w-40 px-3" src="assets/img/logo/jtg-logo.png">
                         <span>JTG Quarry</span>
                     </div>
                 </div>
@@ -156,7 +93,7 @@
                         muted 
                         loop
                     >
-                        <source src="img/jtg video.mp4" type="video/mp4" />
+                        <source src="assets/img/site/jtg video.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -203,118 +140,281 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Products</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Discover our wide range of high-quality stone products suitable for various construction and landscaping projects.</p>
-                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product 1 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-gray-300 relative flex items-center justify-center">
-                        <img src="img/products/Aggregate.avif" alt="Aggregate" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Aggregate</h3>
-                        <p class="text-gray-600 mb-4">High-quality aggregate for construction and landscaping projects.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-amber-500 font-medium">Multiple sizes available</span>
-                          <a href="products.html"><button class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">Details</button></a>
-                        </div>
-                    </div>
+  <!-- Products Section -->
+  <section id="products" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Products</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Discover our wide range of high-quality stone products suitable for various construction and landscaping projects.</p>
+            <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
+        </div>
+        
+        <!-- Desktop: 4 columns, Tablet: 2 columns, Mobile: 1 column -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <!-- Product 1 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img 
+                        src="assets/img/products/Quarter Aggregate.avif" 
+                        alt="1/4 Aggregate" 
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
                 </div>
-                <!-- Product 2 -->
-
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-gray-300 relative flex items-center justify-center">
-                        <img src="img/products/9 Metric block.avif" alt="Aggregate" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Building Stone</h3>
-                        <p class="text-gray-600 mb-4">High-quality building stone for construction projects, available in different shapes and sizes to meet your needs</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-amber-500 font-medium">Custom cutting available.</span>
-                            <a href="products.html"><button class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">Details</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-
                 
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-gray-300 relative flex items-center justify-center">
-                        <img src="img/products/80mm Cabro.avif" alt="Aggregate" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">80mm Cabro</h3>
-                        <p class="text-gray-600 mb-4">Enhance your landscaping projects with our decorative cabro, available in various colors and sizes.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-amber-500 font-medium">Multiple colors.</span>
-                            <a href="products.html"><button class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">Details</button></a>
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">1/4 Aggregate</h3>
+                    <p class="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
+                        Premium crushed stone aggregate ideal for concrete mixing, road base construction, and drainage applications. Perfect size for structural concrete and foundational work.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xl font-bold text-amber-600">KSh 1,334.00</span>
+                            <span class="text-gray-500 text-xs"></span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-amber-600 font-medium text-xs">Multiple sizes available</span>
+                            <a href="products.html">
+                                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 px-3 rounded-md transition-all duration-300 text-sm font-medium">
+                                    View Details
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                
-                <!-- Product 4 -->
-
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-gray-300 relative flex items-center justify-center">
-                        <img src="img/products/Hardcore.avif" alt="Aggregate" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hardcore</h3>
-                        <p class="text-gray-600 mb-4">High-quality aggregates for concrete production, ensuring durability and strength in your construction projects.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-amber-500 font-medium">Certified quality.</span>
-                            <a href="products.html"><button class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">Details</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-gray-300 relative flex items-center justify-center">
-                        <img src="img/products/Road Channels.avif" alt="Aggregate" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Road Channels</h3>
-                        <p class="text-gray-600 mb-4">Durable, precision-crafted road channels designed for efficient drainage and long-lasting performance — available in various sizes to suit any infrastructure project.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-amber-500 font-medium">Certified quality.</span>
-                            <a href="products.html"><button class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">Details</button></a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!-- Product 6 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-gray-300 relative flex items-center justify-center">
-                        <img src="img/products/Fencing posts.avif" alt="Aggregate" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Fencing Posts</h3>
-                        <p class="text-gray-600 mb-4">Strong, weather-resistant fencing posts ideal for agricultural, residential, or commercial use — available in a range of sizes and finishes to fit your project needs..</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-amber-500 font-medium">Certified quality.</span>
-                            <a href="products.html"><button class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">Details</button></a>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
-            <div class="text-center mt-12">
-                <a href="products.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-medium py-3 px-8 rounded-md transition duration-300 ease-in-out">View Products</a>
+
+            <!-- Product 2 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img 
+                        src="assets/img/products/Half Aggregate.avif" 
+                        alt="1/2 Aggregate" 
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+                
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">1/2 Aggregate</h3>
+                    <p class="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
+                        Medium-sized crushed stone perfect for concrete production, asphalt mixing, and general construction. Provides excellent compaction and stability for various building projects.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xl font-bold text-amber-600">KSh 1,566.00</span>
+                            <span class="text-gray-500 text-xs"></span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-amber-600 font-medium text-xs">Standard sizes</span>
+                            <a href="products.html">
+                                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 px-3 rounded-md transition-all duration-300 text-sm font-medium">
+                                    View Details
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img 
+                        src="assets/img/products/three-quarter-aggregate.avif" 
+                        alt="Three Quarter Aggregate" 
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+                
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">3/4 Aggregate</h3>
+                    <p class="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
+                        Large-grade crushed stone aggregate suitable for heavy-duty concrete applications, road construction, and landscaping. Excellent for projects requiring superior strength and durability.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xl font-bold text-amber-600">KSh 1,550.00</span>
+                            <span class="text-gray-500 text-xs"></span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-amber-600 font-medium text-xs">Multiple sizes available</span>
+                            <a href="products.html">
+                                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 px-3 rounded-md transition-all duration-300 text-sm font-medium">
+                                    View Details
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img 
+                        src="assets/img/products/Hardcore.avif" 
+                        alt="Hardcore" 
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+                
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Hardcore</h3>
+                    <p class="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
+                        Robust broken stone material used as sub-base for roads, driveways, and building foundations. Provides excellent load-bearing capacity and drainage for construction projects.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xl font-bold text-amber-600">KSh 1,160</span>
+                            <span class="text-gray-500 text-xs"></span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-amber-600 font-medium text-xs">Certified quality</span>
+                            <a href="products.html">
+                                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 px-3 rounded-md transition-all duration-300 text-sm font-medium">
+                                    View Details
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img 
+                        src="assets/img/products/half plus three quarter aggregate.avif" 
+                        alt="Half Plus Three Quarter Aggregate" 
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+                
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">1/2 + 3/4 Aggregate</h3>
+                    <p class="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
+                        Blended aggregate combining medium and large-grade stones for optimal concrete performance. Ideal for high-strength concrete applications and commercial construction projects.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xl font-bold text-amber-600">KSh 1,276</span>
+                            <span class="text-gray-500 text-xs"></span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-amber-600 font-medium text-xs">Various sizes</span>
+                            <a href="products.html">
+                                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 px-3 rounded-md transition-all duration-300 text-sm font-medium">
+                                    View Details
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img 
+                        src="assets/img/products/stone dust.avif" 
+                        alt="Stone Dust" 
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+                
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Stone Dust</h3>
+                    <p class="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
+                        Fine stone particles perfect for paver base, concrete mixing, and filling applications. Provides excellent compaction and smooth finish for pathways and construction projects.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xl font-bold text-amber-600">KSh 1,856</span>
+                            <span class="text-gray-500 text-xs"></span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-amber-600 font-medium text-xs">Standard sizes</span>
+                            <a href="products.html">
+                                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 px-3 rounded-md transition-all duration-300 text-sm font-medium">
+                                    View Details
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img 
+                        src="assets/img/products/Sand.avif" 
+                        alt="Sand" 
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+                
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sand</h3>
+                    <p class="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
+                        Premium washed and graded sand for concrete mixing, masonry work, and plastering. Clean composition ensures strong bonding and smooth application in all construction needs.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xl font-bold text-amber-600">KSh 1,856</span>
+                            <span class="text-gray-500 text-xs"></span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-amber-600 font-medium text-xs">Clean & graded</span>
+                            <a href="products.html">
+                                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 px-3 rounded-md transition-all duration-300 text-sm font-medium">
+                                    View Details
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="aspect-square bg-gray-200 overflow-hidden">
+                    <img 
+                        src="assets/img/products/precasts.jpeg" 
+                        alt="Precast" 
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+                
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Precasts</h3>
+                    <p class="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
+                        Pre-manufactured concrete blocks designed for quick and efficient construction. Available in various sizes and specifications for walls, boundaries, and structural applications.
+                    </p>
+                    <div class="mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xl font-bold text-amber-600">KSh 500.00</span>
+                            <span class="text-gray-500 text-xs">/per block</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-amber-600 font-medium text-xs">Custom sizes available</span>
+                            <a href="products.html">
+                                <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-2 px-3 rounded-md transition-all duration-300 text-sm font-medium">
+                                    View Details
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+        
+        <div class="text-center mt-12">
+            <a href="products.html" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-medium py-3 px-8 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                View All Products
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- Services Section -->
     <section id="services" class="py-16 bg-white">
