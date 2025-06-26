@@ -217,3 +217,11 @@ body {
 * {
     letter-spacing: normal !important;
 }
+
+@media (max-width: 640px) {
+    a[href="products.html"] {
+        padding: 10px 20px !important;
+        min-width: 140px !important;
+    }
+}
+
