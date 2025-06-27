@@ -598,23 +598,27 @@
                     <form id="contact-form" class="space-y-4">
                         <div>
                             <label for="name" class="block text-gray-700 mb-2">Full Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                            <input type="text" id="name" name="name" placeholder="e.g. John Mwangi" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>
                         </div>
                         <div>
                             <label for="email" class="block text-gray-700 mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                            <input type="email" id="email" name="email" placeholder="e.g. john.mwangi@company.co.ke" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>
                         </div>
                         <div>
                             <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. +254712345678" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500">
                         </div>
                         <div>
                             <label for="subject" class="block text-gray-700 mb-2">Subject</label>
-                            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                            <input type="text" id="subject" name="subject" placeholder="e.g. Ballast Supply Quote Request" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>
                         </div>
                         <div>
                             <label for="message" class="block text-gray-700 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required></textarea>
+                            <textarea id="message" name="message" rows="4" 
+                            placeholder="Please provide details about your requirements such as:
+                            • Quantity required (tons, cubic meters, or number of pieces)
+                            • Any specific size or grade requirements" 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required></textarea>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white font-medium py-3 px-6 rounded-md transition duration-300 ease-in-out">Send Message</button>
