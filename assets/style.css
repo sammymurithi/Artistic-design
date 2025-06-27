@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /* Global Styles */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -233,3 +238,33 @@ body {
 .icon-gradient {
     background: linear-gradient(135deg, #f59e0b, #d97706);
 }
+/* Button Styles */
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    font-weight: 600;
+    font-size: clamp(16px, 2vw, 18px);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3);
+    min-width: 160px;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-12 {
+    margin-top: 3rem;
+}
+

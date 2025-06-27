@@ -196,3 +196,22 @@ function makeSpecificPhoneNumbersClickable() {
         });
     });
 }
+
+// Button interaction handlers
+document.addEventListener('DOMContentLoaded', function() {
+    const viewProductsBtn = document.getElementById('viewProductsBtn');
+    
+    if (viewProductsBtn) {
+        viewProductsBtn.addEventListener('mouseover', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 5px 15px rgba(59, 130, 246, 0.4)';
+        });
+        
+        viewProductsBtn.addEventListener('mouseout', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 3px 10px rgba(59, 130, 246, 0.3)';
+        });
+    }
+});
+
+
