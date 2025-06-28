@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/sammymurithi/Artistic-design#readme",
   "description": "",
-  "devDependencies": {
-    "caniuse-lite": "^1.0.30001726",
+  "dependencies": {
     "tailwindcss": "^3.4.13"
+  },
+  "devDependencies": {
+    "caniuse-lite": "^1.0.30001726"
   }
 }
