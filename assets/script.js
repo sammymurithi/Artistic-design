@@ -215,3 +215,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('form-success').classList.remove('hidden');
+    this.reset();
+});
+
+function sendViaEmail() {
+    const subject = document.getElementById('subject').value || 'Inquiry';
+    const body = `Name: ${document.getElementById('name').value}\nCompany: ${document.getElementById('company').value}\nPhone: ${document.getElementById('phone').value}\n\nMessage: ${document.getElementById('message').value}`;
+    if (confirm('Would you like to open your email app to send this message?\n\nSubject: ' + subject + '\nBody: ' + body)) {
+        window.location.href = `mailto:quarry@jtg.co.ke?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+}

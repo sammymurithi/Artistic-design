@@ -268,3 +268,57 @@ body {
     margin-top: 3rem;
 }
 
+        
+        .section-padding {
+            padding: 6rem 0;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+/* Custom alert styling */
+dialog {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    background: #fff;
+    color: #333;
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+dialog h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+dialog p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+dialog button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #f59e0b;
+    color: white;
+    cursor: pointer;
+}
+dialog button:hover {
+    background: #d97706;
+}
